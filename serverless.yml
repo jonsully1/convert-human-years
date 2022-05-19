@@ -1,0 +1,23 @@
+service: convert-human-years
+frameworkVersion: '2'
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-2
+  stage: dev
+  memorySize: 512
+  profile: sandbox
+  httpApi:
+    cors: true
+
+functions:
+  convertHumanYears:
+      handler: handler.convertHumanYears
+      events:
+        - httpApi:
+            path: /convertHumanYears
+            method: post

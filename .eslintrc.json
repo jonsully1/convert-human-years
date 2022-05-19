@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb-base",
+    "parserOptions":
+    {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "import/no-unresolved": 0,
+      "func-names": 0,
+      "no-underscore-dangle": "off",
+      "strict": "off",
+      "max-len": "off",
+      "global-require": "off",
+      "import/extensions": "off",
+      "no-console": "off",
+      "no-restricted-syntax": "off",
+      "no-unused-vars": "off",
+      "operator-assignment": "off"
+    },
+    "ignorePatterns": ["src/test/*", "src/testjs/"],
+    "env": {
+      "browser": false,
+      "commonjs": true,
+      "es6": true,
+      "mocha": true
+    }
+  }

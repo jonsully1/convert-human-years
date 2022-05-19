@@ -1,0 +1,33 @@
+{
+  "name": "convert-human-years",
+  "version": "1.0.0",
+  "description": "A serverless.js solution (TDD) to convert a human age to cat and dog years",
+  "main": "handler.js",
+  "author": "John OSullivan",
+  "license": "ISC",
+  "dependencies": {
+    "require-dir": "^1.2.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "lambda-tester": "^4.0.1",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "serverless-offline": "^8.7.0",
+    "sinon": "^13.0.2"
+  },
+  "nyc": {
+    "exclude": [
+      "modules/jsonResponse.js",
+      "test/*",
+      "database/*"
+    ]
+  },
+  "scripts": {
+    "test": "nyc mocha --timeout 10000000 --exit"
+  }
+}
